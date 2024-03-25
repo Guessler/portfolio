@@ -1,0 +1,43 @@
+.main-content-bg{
+    width: 100%;
+    height: 100%;
+
+    padding-left: 75px;
+    padding-top: 66px;
+
+    background-color: var(--main-bg);
+}
+.container{
+    width: 889px;
+
+}
+.container > *{
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+h2{
+    margin-bottom: 25px;
+}
+.experience-dimensions{
+    height: 50px;
+    background-color: red;
+}
+.Experience-proto{
+    width: 889px;
+    height: 66px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    border-radius: var(--main-radius);
+    background-color: var(--accent-color);
+}
+.work-place{
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+}
