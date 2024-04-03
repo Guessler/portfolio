@@ -7,7 +7,7 @@ interface MarkupProps {
 
 export const Markup: FC<MarkupProps> = ({leftRender, rightRender}) => (
     <div className="information-container">
-        <div className="main-circle">
+        <div className="main-circle ">
             {leftRender}
         </div>
         <div className="information-indent">

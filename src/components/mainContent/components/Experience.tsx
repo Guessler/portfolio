@@ -1,23 +1,16 @@
-import { Markup } from "../Markup";
+import { Markup } from "../../sideBar/Markup"
+import { useEffect, useState } from "react";
+import { MapToMarkupDto } from "../../sideBar/types";
+import { experience } from "../../sideBar/consts";
 
-import { FC, useEffect, useState } from "react";
-import { MapToMarkupDto } from "../types";
-import { contacts } from "../consts";
-
-
-interface PropsMarkup{
-    activeSideBar: boolean;
-}
-
-export const Contacts: FC<PropsMarkup> = ({ activeSideBar }) => {
-
+export const Experience = () => {
     const [data, setData] = useState<MapToMarkupDto[]>([])
 
     useEffect(() => {
-        setData(contacts)
+        setData(experience)
     }, [])
 
-    return (
+    return(
         data.map(item =>
             <Markup 
                 leftRender={
@@ -26,7 +19,7 @@ export const Contacts: FC<PropsMarkup> = ({ activeSideBar }) => {
                     </div>
                 }
                 rightRender={
-                    <div className={activeSideBar ? "small-margin": "display-none"}>
+                    <div className="small-margin">
                         <p>{item.name}</p>
                         <a className="name-props">{item.desc}</a>
                     </div>

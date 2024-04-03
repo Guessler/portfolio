@@ -1,27 +1,19 @@
-import {FC} from "react"
+// import place from "../../assets/place.svg"
+import { Experience } from "./components/Experience"
 import place from "../../assets/place.svg"
-
-
-interface ExperiaceBlockProps {
-    name: string;
-    timeWorking?: string;
-    placeWorking?: string;
+import { FC } from "react";
+interface SocialProps {
+    activeSideBar: boolean;
 }
-
-export const ExperiaceBlock: FC<ExperiaceBlockProps>  = ({ name, timeWorking, placeWorking }) => (
-    <div className="Experience-proto">
-        <div className="flex-row ">
-        {/* <img src={ShariXLogo} alt={ShariXLogo} /> */}
-        <div className="flex-col information-indent small-margin">
-            <p>{name}</p>
-        </div>
-        </div>
-        <div className="flex-col small-margin">
-            <span>{timeWorking}</span>
-            <span className="flex-row">
-                <img style={{marginRight: '2px'}} src={place} alt={place} />
-                <span>{placeWorking}</span>
-            </span>
+export const ExperiaceBlock: FC<SocialProps> = ({ activeSideBar }) => (
+    <div className={activeSideBar? "Experience-proto ordinary-width": "Experience-proto closed-sidebar-width"}>
+        <Experience />
+        <div className="small-margin" style={{ width: "150px"}}>
+            <span>Dec 22, still working</span>
+            <div style={{display: "flex", flexDirection: "row", gap: "5px"}}>
+                <img src={place} alt={place} />
+                <span className="name-props">Moscow, Russia</span>
+            </div>
         </div>
     </div>
 )

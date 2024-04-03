@@ -10,6 +10,7 @@
 
   --line-color: #AAAAAA;
   --grey-color: #66666688;
+  --border-color: #BCBCBC;
 
   --font-xl: 36px;
   --font-xl2: 32px;
@@ -54,4 +55,14 @@ body{
 }
 .small-margin p{
   margin: 0;
+}
+.flex-col-rev{
+  width: 100%;
+  
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+}
+.display-none{
+  display: none;
 }

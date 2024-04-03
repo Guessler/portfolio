@@ -1,27 +1,22 @@
-import { Markup } from "../Markup";
-
 import { FC, useEffect, useState } from "react";
+import { Markup } from "../Markup";
+import { languages } from "../consts";
 import { MapToMarkupDto } from "../types";
-import { contacts } from "../consts";
 
-
-interface PropsMarkup{
+interface SocialProps {
     activeSideBar: boolean;
 }
 
-export const Contacts: FC<PropsMarkup> = ({ activeSideBar }) => {
-
+export const Languages:FC<SocialProps> = ({ activeSideBar }) => {
     const [data, setData] = useState<MapToMarkupDto[]>([])
-
     useEffect(() => {
-        setData(contacts)
+        setData(languages)
     }, [])
-
-    return (
-        data.map(item =>
+    return(
+        data.map(item=>
             <Markup 
                 leftRender={
-                    <div className="grey-color-circle main-circle">
+                    <div className="main-circle">
                         <img src={item.image} alt={item.image} />
                     </div>
                 }

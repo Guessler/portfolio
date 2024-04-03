@@ -23,7 +23,6 @@ h2{
     background-color: red;
 }
 .Experience-proto{
-    width: 889px;
     height: 66px;
 
     display: flex;
@@ -33,8 +32,15 @@ h2{
     padding-left: 10px;
     padding-right: 10px;
 
+    border: 0.5px solid var(--border-color);
     border-radius: var(--main-radius);
     background-color: var(--accent-color);
+}
+.ordinary-width{
+    width: 889px;
+}
+.closed-sidebar-width{
+    width: 1140px;
 }
 .work-place{
     background-color: red;
