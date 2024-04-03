@@ -66,3 +66,7 @@ body{
 .display-none{
   display: none;
 }
+
+.justify-center{
+  justify-content: center ;
+}

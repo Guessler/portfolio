@@ -1,4 +1,4 @@
-import { Markup } from "../Markup";
+import { Markup } from "../../markup";
 import { MapToMarkupDto } from "../types";
 import {FC, useEffect, useState } from "react";
 import { socials } from "../consts";

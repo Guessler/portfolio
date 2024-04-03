@@ -1,8 +1,9 @@
-import { Markup } from "../Markup";
+import { Markup } from "../../markup";
 
 import { FC, useEffect, useState } from "react";
 import { MapToMarkupDto } from "../types";
 import { contacts } from "../consts";
+import clsx from "clsx";
 
 
 interface PropsMarkup{
@@ -31,6 +32,8 @@ export const Contacts: FC<PropsMarkup> = ({ activeSideBar }) => {
                         <a className="name-props">{item.desc}</a>
                     </div>
                 }
+                hideRight={!activeSideBar}
+                contanerStyles={clsx(!activeSideBar && "justify-center")}
             />
         )
     )

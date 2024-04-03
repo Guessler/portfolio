@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from "react";
-import { Markup } from "../Markup";
+import { Markup } from "../../markup";
 import { languages } from "../consts";
 import { MapToMarkupDto } from "../types";
 

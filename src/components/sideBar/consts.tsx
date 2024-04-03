@@ -65,13 +65,12 @@ export const languages: MapToMarkupDto[] = [
         desc: "Professional working"
     },
 ]
-export const experience: MapToMarkupDto[] = [
-    {
+export const experience: MapToMarkupDto = {
         image: ShariXLogo,
         name: "Frontend developer",
         desc: "ShariX"
-    }
-]
+}
+
 export const anotherInformation: MapToMarkupDto[] = [
     {
         image: "sadasd",

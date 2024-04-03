@@ -1,30 +1,32 @@
-import { Markup } from "../../sideBar/Markup"
+import { Markup } from "../../markup"
 import { useEffect, useState } from "react";
 import { MapToMarkupDto } from "../../sideBar/types";
 import { experience } from "../../sideBar/consts";
 
 export const Experience = () => {
-    const [data, setData] = useState<MapToMarkupDto[]>([])
+    const [data, setData] = useState<MapToMarkupDto | undefined>(undefined)
 
     useEffect(() => {
         setData(experience)
     }, [])
 
+    if(!data){
+        return null
+    }
+
     return(
-        data.map(item =>
-            <Markup 
-                leftRender={
-                    <div className="grey-color-circle main-circle">
-                        <img src={item.image} alt={item.image} />
-                    </div>
-                }
-                rightRender={
-                    <div className="small-margin">
-                        <p>{item.name}</p>
-                        <a className="name-props">{item.desc}</a>
-                    </div>
-                }
-            />
-        )
+        <Markup 
+            leftRender={
+                <div className="grey-color-circle main-circle">
+                    <img src={data.image} alt={data.image} />
+                </div>
+            }
+            rightRender={
+                <div className="small-margin">
+                    <p>{data.name}</p>
+                    <a className="name-props">{data.desc}</a>
+                </div>
+            }
+        />
     )
 }
