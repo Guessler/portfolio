@@ -31,9 +31,11 @@ export const SideBar = () => {
             <p className={activeSideBar ? "" : "display-none"}>Languages</p>
             <Languages activeSideBar={activeSideBar}/>
             
+            <div className={activeSideBar? "" : "button-adaptive-position"}>
             <button className="theme-btn">
                 <div className="circle"></div>
             </button>
+            </div>
         </div>
     )
 }

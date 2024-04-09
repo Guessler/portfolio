@@ -18,9 +18,9 @@
 h2{
     margin-bottom: 25px;
 }
-.experience-dimensions{
-    height: 50px;
-    background-color: red;
+
+.enterprise-name{
+    margin: 0;
 }
 .Experience-proto{
     height: 66px;
@@ -29,8 +29,8 @@ h2{
     align-items: center;
     justify-content: space-between;
 
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
 
     border: 0.5px solid var(--border-color);
     border-radius: var(--main-radius);
@@ -42,8 +42,160 @@ h2{
 .closed-sidebar-width{
     width: 1140px;
 }
-.work-place{
-    background-color: red;
+.projectsPropsContainer{
+    width: 338px;
+    min-height: 296px;
+
+    border-radius: 10px;
+
+    padding: 10px;
+
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+
+    border: 0.5px solid var(--border-color);
+
+    background: var(--accent-color);
+}
+.icon-block{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.switch-button{
+    width: 26px;
+    height: 26px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: var(--main-fat-text-color);
+}
+.left-button{
+    transform: scaleX(-1);
+}
+.switch-container{
+    width: 100%;
+
+    display: flex;
+    justify-content:space-between;
+    position: absolute;
+}
+.website-icon{
+    width: 100%;
+    border-radius: 5px;
+}
+.education-container{
+    width: 262px;
+    height: 124px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    padding: 10px;
+
+    background: var(--accent-color);
+
+    border: 0.5px solid var(--border-color);
+
+    border-radius: var(--main-radius);
+}
+.education-container-logo{
+    gap: 12px;
+
+    display: flex;
+    align-items: flex-end;
+}
+.education-container-clarification{
+    padding-left: 10px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.design-skills{
+    width: 390px;
+    height: 184px;
+
+    background: var(--accent-color);
+    border-radius: var(--main-radius);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 6px 30px;
+}
+
+.skills-block-line{
+    width: 1px;
+    height: 100%;
+
+    border-radius: 1px;
+
+    background: var(--main-text-color);
+}
+.development-skill-long-block{
+    width: 354px;
+    height: 44px;
+
+    background: var(--accent-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.development-easiest-skills{
+    width: 128px;
+    height: 58px;
+
+    background: var(--accent-color);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.development-git-skills{
+    width: 212px;
+    height: 58px;
+
+    background: var(--accent-color);
+
+    display: flex;
+    align-items: center;
+}
+.top-left-radius{
+    border-top-left-radius: var(--main-radius);
+}
+.bottom-left-radius{
+    border-bottom-left-radius: var(--main-radius);
+}
+.bottom-left-right-radius {
+    border-bottom-left-radius: var(--main-radius);
+    border-bottom-right-radius: var(--main-radius);
+}
+.skills-clock{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.development-base-skills{
+    display: flex;
+    justify-content: space-between;
+}
+.development-skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

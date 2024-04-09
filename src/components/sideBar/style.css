@@ -44,7 +44,7 @@
     justify-content: center;
 }
 .grey-color-circle{
-    background-color: var(--grey-color);
+    background-color: var(--main-text-color);
 }
 .instagram{
     background-color: #CA3087;
@@ -107,4 +107,7 @@
     margin-bottom: 50px;
     margin-top: 36px;
 }
-
+.button-adaptive-position{
+    display: flex;
+    justify-content: center;
+}

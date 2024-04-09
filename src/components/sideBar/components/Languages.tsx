@@ -2,7 +2,7 @@ import { FC, useEffect, useState } from "react";
 import { Markup } from "../../markup";
 import { languages } from "../consts";
 import { MapToMarkupDto } from "../types";
-
+import clsx from "clsx";
 interface SocialProps {
     activeSideBar: boolean;
 }
@@ -26,6 +26,8 @@ export const Languages:FC<SocialProps> = ({ activeSideBar }) => {
                         <a className="name-props">{item.desc}</a>
                     </div>
                 }
+                hideRight={!activeSideBar}
+                contanerStyles={clsx(!activeSideBar && "justify-center")}
             />
         )
     )
