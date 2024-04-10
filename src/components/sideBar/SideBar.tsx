@@ -8,6 +8,7 @@ import { Contacts } from "./components/Contacts"
 import { Socials } from "./components/Socials"
 import { Languages } from "./components/Languages"
 import { useSidebar } from "../../utils/useSidebar"
+import { ThemeButton } from "./components/ThemeButton"
 import clsx from "clsx"
 
 export const SideBar = () => {
@@ -32,9 +33,7 @@ export const SideBar = () => {
             <Languages activeSideBar={activeSideBar}/>
             
             <div className={activeSideBar? "" : "button-adaptive-position"}>
-            <button className="theme-btn">
-                <div className="circle"></div>
-            </button>
+                <ThemeButton/>
             </div>
         </div>
     )
