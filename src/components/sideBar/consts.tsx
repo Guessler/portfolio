@@ -1,4 +1,4 @@
-import { MapToMarkupDto } from "./types";
+import { MapToMarkupDto, ThemesType } from "./types";
 
 import email from "../../assets/email.svg"
 import website from "../../assets/website.svg"
@@ -78,3 +78,20 @@ export const anotherInformation: MapToMarkupDto[] = [
         desc: "Moscow, Russia"
     }
 ]
+
+export const themes: ThemesType = {
+    ligth:{
+        "--main-bg": "#F5F5F5",
+        "--accent-color": "#FFFFFF",
+        "--side-bar-color": "#EFEFEF",
+        "--main-text-color": "#666666",
+        "--main-fat-text-color": "#333333"
+    },
+    dark:{
+        "--main-bg": "#232339",
+        "--accent-color": "#2E2E48",
+        "--side-bar-color": "#462682",
+        "--main-text-color": "#fff",
+        "--main-fat-text-color": "#f5f5f5"
+    },
+}
