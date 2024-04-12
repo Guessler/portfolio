@@ -3,7 +3,7 @@ import { MapToMarkupDto, ThemesType } from "./types";
 import email from "../../assets/email.svg"
 import website from "../../assets/website.svg"
 import phone from "../../assets/phone.svg"
-import address from "../../assets/Address.svg"
+import address from "../../assets/svg/Address.svg"
 
 import instagram from "../../assets/Instagram.svg"
 import telegram from "../../assets/telegram.svg"

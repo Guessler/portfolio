@@ -4,12 +4,15 @@ import { ThemeType } from "../types";
 
 export const ThemeButton = () => {
     const [isDarkMode, toggleDarkMode] = useReducer((prev) => !prev, false);
+
     useEffect(()=>{
         const savedTheme = localStorage.getItem("theme")
         if(savedTheme && savedTheme === "dark"){
             toggleDarkMode()
         }
     },[])
+
+
     useEffect(() => {
         const root = document.documentElement;
 
@@ -30,6 +33,7 @@ export const ThemeButton = () => {
         return 
         
     },[isDarkMode])
+
     return (
         // .swiched-theme-btn
         // "theme-btn"

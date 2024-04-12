@@ -21,6 +21,7 @@ export const Contacts: FC<PropsMarkup> = ({ activeSideBar }) => {
     return (
         data.map(item =>
             <Markup 
+                key={item.name}
                 leftRender={
                     <div className="grey-color-circle main-circle">
                         <img src={item.image} alt={item.image} />

@@ -15,6 +15,7 @@ export const Languages:FC<SocialProps> = ({ activeSideBar }) => {
     return(
         data.map(item=>
             <Markup 
+                key={item.name}
                 leftRender={
                     <div className="main-circle">
                         <img src={item.image} alt={item.image} />

@@ -1,26 +1,44 @@
-import { FC } from "react"
-import arrow from "../../assets/leftArrow.svg"
-interface ProjectsProps{
-    webSiteCard: string,
-    webSiteName: string,
-    clarification: string,
-    link: string,
-}
-export const Projects:FC<ProjectsProps> = ({ webSiteCard, webSiteName, link, clarification}) => {
+import {  useEffect, useState } from "react"
+
+import banner1 from "../../assets/image 1.png"
+import banner2 from "../../assets/image 2.png"
+import { Project } from "./components/Project"
+import { ProjectDto } from "./types"
+
+
+export const Projects = () => {
+
+    const [data, setData]  = useState<ProjectDto[]>([])
+
+    useEffect(() => {
+        setData([
+            {
+                pics: [banner1, banner2],
+                webSiteName: 'Poweful Design System',
+                link: 'https://sports.sharix.org',
+                clarification: "Figma UI Kit and Design System targeting a wide variety of use cases."
+            },
+            {
+                pics: banner1,
+                webSiteName: 'Poweful Design System1',
+                link: 'https://sports.sharix.org',
+                clarification: "Figma UI Kit and Design System targeting a wide variety of use cases."
+            },
+            {
+                pics: banner1,
+                webSiteName: 'Poweful Design System2',
+                link: 'https://sports.sharix.org',
+                clarification: "Figma UI Kit and Design System targeting a wide variety of use cases."
+            },
+        ])
+    },[])
+
     return(
-        <div>
-            <div className="projectsPropsContainer small-margin">
-                <div className="icon-block">
-                    <div className="switch-container">
-                    <button className="switch-button"><img src={arrow} alt={arrow} /></button>
-                    <button className="switch-button "><img className="left-button" src={arrow} alt={arrow}/></button>
-                    </div>
-                <img className="website-icon" src={webSiteCard} alt={webSiteCard} />
-                </div>
-                <p>{webSiteName}</p>
-                <a href={link}>{ link }</a>
-                <span >{clarification}</span>
+        <>
+            <h2>Latest projects</h2>
+            <div>
+                {data.map(item => <Project key={item.webSiteName} value={item} />)}
             </div>
-        </div>
+        </>
     )
 }

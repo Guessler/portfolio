@@ -1,8 +1,8 @@
 import React, { PropsWithChildren, createContext, useContext, useReducer } from 'react';
 
 interface SidebarStateContextType {
-    state: boolean;
-    toggleState: () => void;
+  state: boolean;
+  toggleState: () => void;
 }
 
 const SidebarContext = createContext<SidebarStateContextType | undefined>(undefined);

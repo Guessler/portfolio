@@ -2,7 +2,6 @@ import "./style.css"
 import { ExperiaceBlock } from './components/ExperiaceBlock'
 import { useSidebar } from "../../utils/useSidebar"
 import { Projects } from "../projects"
-import icon from "../../assets/image 1.png"
 import { Education } from "../education"
 import { Skills } from "../skills"
 
@@ -15,14 +14,9 @@ export const MainContent = () => {
         <div className="main-content-bg">
             <div className="container">
             <h2>Experience</h2>
-            <ExperiaceBlock activeSideBar={state}/>
-            <h2>Latest projects</h2>
-            <Projects 
-            webSiteCard = {icon}
-            webSiteName = "Poweful Design System"
-            link="https://sports.sharix.org"
-            clarification = "Figma UI Kit and Design System targeting a wide variety of use cases."
-            />
+            <ExperiaceBlock activeSideBar={state} />
+            
+            <Projects />
             <h2>Education</h2>
             <Education
             icon = {kp11}

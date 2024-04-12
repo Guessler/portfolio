@@ -100,3 +100,7 @@ body {
 .justify-center {
   justify-content: center;
 }
+
+.enable-animation{
+  transition: 1s all;
+}
