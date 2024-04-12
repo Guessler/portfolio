@@ -9,14 +9,15 @@
   --dark-main-bg: #232339;
   --dark-accent-color: #2E2E48;
   --hover-dark-color: #462682;
-
-
+  --lite-dark-theme: #9343F7;
 
   --line-color: #AAAAAA;
   --border-color: #BCBCBC;
 
   --main-text-color: #666666;
   --main-fat-text-color: #333333;
+
+  --information-block-color: #6666667c;
 
   --font-xl: 36px;
   --font-xl2: 32px;
@@ -57,7 +58,7 @@ span {
 body {
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
-  color: #333333;
+  color: var(--main-fat-text-color);
   font-weight: 400;
   font-style: normal;
 }

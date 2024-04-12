@@ -85,13 +85,13 @@ export const themes: ThemesType = {
         "--accent-color": "#FFFFFF",
         "--side-bar-color": "#EFEFEF",
         "--main-text-color": "#666666",
-        "--main-fat-text-color": "#333333"
+        "--main-fat-text-color": "#333333",
     },
     dark:{
         "--main-bg": "#232339",
         "--accent-color": "#2E2E48",
-        "--side-bar-color": "#462682",
+        "--side-bar-color": "#2E2E48",
         "--main-text-color": "#fff",
-        "--main-fat-text-color": "#f5f5f5"
+        "--main-fat-text-color": "#f5f5f5",
     },
 }

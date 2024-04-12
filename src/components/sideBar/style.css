@@ -6,7 +6,7 @@
     -webkit-text-fill-color: transparent;
 }
 .side-bar-content {
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 10px;
     padding-left: 20px;
     padding-right: 20px;
@@ -44,7 +44,7 @@
     justify-content: center;
 }
 .grey-color-circle{
-    background-color: var(--main-text-color);
+    background-color: var(--information-block-color);
 }
 .instagram{
     background-color: #CA3087;
@@ -70,8 +70,8 @@
     color: var(--line-color);
 }
 .theme-btn{
-    width: 50px;
-    height: 30px;
+    width: 56px;
+    height: 32px;
 
     border-radius: 100px;
     
@@ -83,12 +83,20 @@
 
     cursor: pointer;
 }
+.swiched-theme-btn{
+    background: var(--lite-dark-theme);
+    justify-content: end;
+    border: 2px solid var(--lite-dark-theme);
+}
 .circle{
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
 
     border-radius: 50%;
     background-color: #79747E;
+}
+.white-circle{
+    background-color: white;
 }
 
 .avatar-close-sidebar{
