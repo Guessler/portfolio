@@ -86,17 +86,25 @@ h2 {
     border: 0.5px solid var(--accent-color);
     box-shadow: 0 0 40px var(--border-color);
 }
-.latest-project-container {
+.latest-project-wrapper{
+    width: 100%;
     height: 420px;
+    position: relative;
+
+}
+
+.latest-project-container {
+
+    width: 100%;
+    height: 100%;
     padding-left: 40px;
     display: flex;
     align-items: center;
     gap: 30px;
-    position: relative;
     overflow: auto;
 }
 
-.latest-project-container::after {
+.latest-project-wrapper::after {
     content: "";
     position: absolute;
     top: 0;

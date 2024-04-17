@@ -33,7 +33,7 @@ export const Project: FC<ProjectsProps> = ({value: {pics, webSiteName, clarifica
                 </div>
             </div>
             <p>{webSiteName}</p>
-            <a href={link}>{ link }</a>
+            <a target="_blank" href={link}>{ link }</a>
             <span >{clarification}</span>
         </div>
     )

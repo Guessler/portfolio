@@ -42,8 +42,10 @@ export const Projects = () => {
     return(
         <>
             <h2>Latest projects</h2>
-            <div className="latest-project-container">
-                {data.map(item => <Project key={item.webSiteName} value={item} />)}
+            <div className="latest-project-wrapper">
+                <div className="latest-project-container">
+                    {data.map(item => <Project key={item.webSiteName} value={item} />)}
+                </div>
             </div>
         </>
     )
