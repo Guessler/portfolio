@@ -1,4 +1,4 @@
-import { FC, useRef } from "react";
+import { FC, useRef} from "react";
 import arrow from "../../../assets/leftArrow.svg"
 import { ProjectDto } from "../types";
 
@@ -8,7 +8,7 @@ interface ProjectsProps{
 }
 
 export const Project: FC<ProjectsProps> = ({value: {pics, webSiteName, clarification, link} }) => {
-
+    // const [isArray, setIsArray] = useState()
     const ref = useRef<HTMLDivElement>(null)
 
     const onSlide = (toLeft?: boolean) => {

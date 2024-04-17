@@ -30,13 +30,19 @@ export const Projects = () => {
                 link: 'https://sports.sharix.org',
                 clarification: "Figma UI Kit and Design System targeting a wide variety of use cases."
             },
+            {
+                pics: banner1,
+                webSiteName: 'Poweful Design System2',
+                link: 'https://sports.sharix.org',
+                clarification: "Figma UI Kit and Design System targeting a wide variety of use cases."
+            },
         ])
     },[])
 
     return(
         <>
             <h2>Latest projects</h2>
-            <div>
+            <div className="latest-project-container">
                 {data.map(item => <Project key={item.webSiteName} value={item} />)}
             </div>
         </>
