@@ -1,14 +1,35 @@
 import { Experience } from "./Experience"
 import place from "../../../assets/place.svg"
-import { FC } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import clsx from "clsx";
+
+import hell from "../../../assets/videoplayback.mp4"
+import { useSidebar } from "../../../utils/useSidebar";
 
 interface SocialProps {
     activeSideBar: boolean;
 }
 
-export const ExperiaceBlock: FC<SocialProps> = ({ activeSideBar }) => (
-    <div className={clsx(activeSideBar? "Experience-proto ordinary-width": "Experience-proto closed-sidebar-width", 'enable-animation' )}>
+export const ExperiaceBlock: FC<SocialProps> = ({ activeSideBar }) => {
+    const {isDark} = useSidebar()
+
+    const [isHover, setIsHover] = useState(false)
+    const videoRef = useRef<HTMLVideoElement>(null)
+    useEffect(() => {
+        if (isHover) {
+            videoRef.current?.play()
+        }
+        else {
+            videoRef.current?.pause()
+        }
+    }, [isHover])
+
+    useEffect(() => {
+        videoRef.current?.pause()
+    }, [])
+    return(
+    <div onMouseEnter={(() => setIsHover(true))} onMouseLeave={(()=>{ setIsHover(false)})} className={clsx(activeSideBar? "Experience-proto ordinary-width": "Experience-proto closed-sidebar-width", isDark ? 'enable-animation unShadow':  "enable-animation")}>
+        {isDark ?<video  ref={videoRef}  src={hell} /> : ""}
         <Experience />
         <div className="small-margin" style={{ width: "150px"}}>
             <span>Dec 22, still working</span>
@@ -18,4 +39,5 @@ export const ExperiaceBlock: FC<SocialProps> = ({ activeSideBar }) => (
             </div>
         </div>
     </div>
-)
+    )
+}

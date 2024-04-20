@@ -1,6 +1,6 @@
 .main-content-bg {
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
 
     padding-left: 75px;
     padding-top: 66px;
@@ -37,6 +37,10 @@ h2 {
     align-items: center;
     justify-content: space-between;
 
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
     padding-left: 15px;
     padding-right: 15px;
 
@@ -51,7 +55,18 @@ h2 {
     border: 0.5px solid var(--accent-color);
     box-shadow: 0 0 80px var(--border-color);
 }
+.Experience-proto video{
+    top: 0;
+    left: 0;
+    z-index: -1;
+    
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
 
+    position: absolute;
+}
 .ordinary-width {
     width: 889px;
 }
@@ -76,16 +91,35 @@ h2 {
     border: 0.5px solid var(--border-color);
 
     background: var(--accent-color);
-    
 
+    position: relative;
+    
+    z-index: 1;
+    overflow: hidden;
 
     transition: 0.3s all;
 }
-.projectsPropsContainer:hover{
+.projectsPropsContainer video{
+    top: 0;
+    left: 0;
+    z-index: -1;
+    
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
 
+    position: absolute;
+}
+
+
+.projectsPropsContainer:hover{
     border: 0.5px solid var(--accent-color);
     box-shadow: 0 0 40px var(--border-color);
 }
+
+
+
 .latest-project-wrapper{
     width: 100%;
     height: 420px;
@@ -97,16 +131,22 @@ h2 {
 
     width: 100%;
     height: 100%;
+
     padding-left: 40px;
+
     display: flex;
     align-items: center;
+    
     gap: 30px;
-    overflow: auto;
+
+    /* overflow: auto; */
+    overflow: hidden;
 }
 
 .latest-project-wrapper::after {
     content: "";
     position: absolute;
+    z-index: 1;
     top: 0;
     right: -100px;
     width: 150px;
@@ -193,6 +233,8 @@ h2 {
 
 .education-container {
     position: relative;
+    overflow: hidden;
+    z-index: 1;
     width: 262px;
     height: 124px;
     display: flex;
@@ -224,10 +266,25 @@ h2 {
     justify-content: center;
     flex-direction: column;
 }
+.education-container video{
+    top: 0;
+    left: 0;
+    z-index: -1;
+    
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
 
+    position: absolute;
+}
 .design-skills {
     width: 390px;
     height: 184px;
+
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
 
     background: var(--accent-color);
     border-radius: var(--main-radius);
@@ -239,6 +296,18 @@ h2 {
     padding: 6px 30px;
     
     transition: 0.3s all;
+}
+.design-skills video{
+    top: 0;
+    left: 0;
+    z-index: -1;
+    
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
+
+    position: absolute;
 }
 .design-skills:hover{
     border: 0.5px solid var(--accent-color);
@@ -258,11 +327,27 @@ h2 {
 
     background: var(--accent-color);
 
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
     display: flex;
     align-items: center;
     justify-content: center;
 
     transition: 0.3s all;
+}
+.development-skill-long-block video{
+    top: 0;
+    left: 0;
+    z-index: -1;
+    
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
+
+    position: absolute;
 }
 .development-skill-long-block:hover{
     border: 0.5px solid var(--accent-color);
@@ -277,6 +362,10 @@ h2 {
     padding-bottom: 10px;
     background: var(--accent-color);
 
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
     /* padding: 10px; */
     display: flex;
     justify-content: space-between;
@@ -285,6 +374,18 @@ h2 {
     align-items: center;
 
     transition: 0.3s all;
+}
+.development-easiest-skills video{
+    top: 0;
+    left: 0;
+    z-index: -1;
+    
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
+
+    position: absolute;
 }
 .development-easiest-skills span{
     font-size: 13px;
@@ -297,10 +398,26 @@ h2 {
     width: 212px;
     height: 58px;
 
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
     background: var(--accent-color);
 
     display: flex;
     align-items: center;
+}
+.development-git-skills video{
+    top: 0;
+    left: 0;
+    z-index: -1;
+    
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
+
+    position: absolute;
 }
 .development-git-skills ul li{
     font-size: 13px;
@@ -340,4 +457,12 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.unShadow{
+    border: none !important;
+}
+.unShadow:hover{
+    border: none;
+    box-shadow: none;
 }

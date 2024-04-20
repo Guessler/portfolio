@@ -1,6 +1,7 @@
-import { FC } from "react"
+import { FC, useEffect, useRef, useState } from "react"
 
-
+import hell from "../../assets/videoplayback.mp4"
+import { useSidebar } from "../../utils/useSidebar"
 interface EducationProps{
     icon: string,
     Enterprise: string,
@@ -9,8 +10,28 @@ interface EducationProps{
 }
 
 export const Education:FC<EducationProps> = ({ icon, Enterprise, year,clarification}) =>{
+
+    const {isDark} = useSidebar()
+
+    const [isHover, setIsHover] = useState(false)
+    const videoRef = useRef<HTMLVideoElement>(null)
+    
+    useEffect(() => {
+        if (isHover) {
+            videoRef.current?.play()
+        }
+        else {
+            videoRef.current?.pause()
+        }
+    }, [isHover])
+
+    useEffect(() => {
+        videoRef.current?.pause()
+    }, [])
+    
     return(
-        <div className="education-container">
+        <div onMouseEnter={(() => setIsHover(true))} onMouseLeave={(()=>{ setIsHover(false)})} className={isDark?"education-container unShadow":"education-container"}>
+            {isDark ?<video  ref={videoRef}  src={hell} /> : ""}
             <div className="education-container-logo">
                 <img src={icon} alt={icon} />
                 <p className="enterprise-name">{Enterprise}</p>

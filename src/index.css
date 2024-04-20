@@ -29,6 +29,9 @@
 
   --main-radius: 10px;
 }
+/* html {
+  scroll-behavior: smooth;
+} */
 
 body {
   margin: 0;
@@ -103,4 +106,8 @@ body {
 
 .enable-animation{
   transition: 1s all;
+}
+
+.hell-portal{
+  background: url("./assets/videoplayback.mp4" )no-repeat;
 }

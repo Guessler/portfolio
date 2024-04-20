@@ -1,10 +1,10 @@
-import { useEffect, useReducer } from "react"
+import { useEffect } from "react"
 import { themes } from "../consts";
 import { ThemeType } from "../types";
+import { useSidebar } from "../../../utils/useSidebar";
 
 export const ThemeButton = () => {
-    const [isDarkMode, toggleDarkMode] = useReducer((prev) => !prev, false);
-
+const {isDark:isDarkMode,toggleIsDark:toggleDarkMode} = useSidebar()
     useEffect(()=>{
         const savedTheme = localStorage.getItem("theme")
         if(savedTheme && savedTheme === "dark"){
@@ -35,8 +35,6 @@ export const ThemeButton = () => {
     },[isDarkMode])
 
     return (
-        // .swiched-theme-btn
-        // "theme-btn"
         <button onClick={toggleDarkMode} className={isDarkMode ? "theme-btn swiched-theme-btn": " theme-btn"}>
             <div className={isDarkMode ? "circle white-circle": "circle "}></div>
         </button>
