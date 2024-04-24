@@ -4,7 +4,7 @@ import { useSidebar } from "../../utils/useSidebar";
 import { Projects } from "../projects";
 import { Education } from "../education";
 import { Skills } from "../skills";
-import kp11 from "../../assets/kp-11-logo.svg";
+import kp11 from "../../assets/svg/kp-11-logo.svg"
 
 export const MainContent = () => {
     const { state } = useSidebar();

@@ -5,6 +5,8 @@ import banner2 from "../../assets/image 2.png"
 import { Project } from "./components/Project"
 import { ProjectDto } from "./types"
 
+import { Swiper } from 'swiper/react';
+import 'swiper/css';
 
 export const Projects = () => {
 
@@ -44,7 +46,13 @@ export const Projects = () => {
             <h2>Latest projects</h2>
             <div className="latest-project-wrapper">
                 <div className="latest-project-container">
+            <Swiper
+                  spaceBetween={50}
+                  slidesPerView={3}>
+                {/* <SwiperSlide> */}
                     {data.map(item => <Project key={item.webSiteName} value={item} />)}
+                {/* </SwiperSlide> */}
+            </Swiper>
                 </div>
             </div>
         </>

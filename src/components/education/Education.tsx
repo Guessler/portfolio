@@ -30,6 +30,7 @@ export const Education:FC<EducationProps> = ({ icon, Enterprise, year,clarificat
     }, [])
     
     return(
+        
         <div onMouseEnter={(() => setIsHover(true))} onMouseLeave={(()=>{ setIsHover(false)})} className={isDark?"education-container unShadow":"education-container"}>
             {isDark ?<video  ref={videoRef}  src={hell} /> : ""}
             <div className="education-container-logo">

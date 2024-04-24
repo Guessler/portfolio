@@ -1,7 +1,8 @@
 import { Experience } from "./Experience"
-import place from "../../../assets/place.svg"
+import place from "../../../assets/svg/place.svg"
 import { FC, useEffect, useRef, useState } from "react";
 import clsx from "clsx";
+
 
 import hell from "../../../assets/videoplayback.mp4"
 import { useSidebar } from "../../../utils/useSidebar";

@@ -1,18 +1,18 @@
 import { MapToMarkupDto, ThemesType } from "./types";
 
-import email from "../../assets/email.svg"
-import website from "../../assets/website.svg"
-import phone from "../../assets/phone.svg"
+import email from "../../assets/svg/email.svg"
+import website from "../../assets/svg/website.svg"
+import phone from "../../assets/svg/phone.svg"
 import address from "../../assets/svg/Address.svg"
 
-import instagram from "../../assets/Instagram.svg"
-import telegram from "../../assets/telegram.svg"
-import vk from "../../assets/vk.svg"
+import instagram from "../../assets/svg/Instagram.svg"
+import telegram from "../../assets/svg/telegram.svg"
+import vk from "../../assets/svg/vk.svg"
 
-import Russia from "../../assets/Russia.svg"
-import greatBritain from "../../assets/greatBritain.svg"
+import Russia from "../../assets/svg/Russia.svg"
+import greatBritain from "../../assets/svg/greatBritain.svg"
 
-import ShariXLogo from "../../assets/big-sharix 1.svg" 
+import ShariXLogo from "../../assets/svg/big-sharix 1.svg" 
 export const contacts: MapToMarkupDto[] = [
     {
         image: email,

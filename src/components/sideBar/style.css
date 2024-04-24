@@ -106,11 +106,17 @@
 }
 .small-arrow{
     width: 20px;
+
+    fill: var(--main-fat-text-color);
+
 }
 .small-arrow-reverce{
     width: 20px;
 
     transform: scaleX(-1);
+
+    fill: var(--main-fat-text-color);
+
 
     margin-bottom: 50px;
     margin-top: 36px;
@@ -118,4 +124,13 @@
 .button-adaptive-position{
     display: flex;
     justify-content: center;
+}
+
+@media screen and (max-width: 128px) {
+    .side-bar-normal-width{
+        width: 94%;
+        position: absolute;
+        z-index: 100;
+        min-height: 100%;
+    }
 }

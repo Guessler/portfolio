@@ -1,9 +1,13 @@
 import { FC, useEffect, useRef, useState } from "react";
-import arrow from "../../../assets/leftArrow.svg"
+import arrow from "../../../assets/svg/leftArrow.svg"
 import { ProjectDto } from "../types";
 
 import hell from "../../../assets/videoplayback.mp4"
 import { useSidebar } from "../../../utils/useSidebar";
+
+import {  SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
 
 interface ProjectsProps {
     value: ProjectDto
@@ -38,6 +42,7 @@ export const Project: FC<ProjectsProps> = ({ value: { pics, webSiteName, clarifi
     }, [])
 
     return (
+        <SwiperSlide>
         <div onMouseEnter={(() => setIsHover(true))} onMouseLeave={(()=>{ setIsHover(false)})}  className={isDark ?"projectsPropsContainer small-margin unShadow":"projectsPropsContainer small-margin "}>
             {isDark ?<video  ref={videoRef}  src={hell} /> : ""}
             <div className="icon-block">
@@ -55,5 +60,6 @@ export const Project: FC<ProjectsProps> = ({ value: { pics, webSiteName, clarifi
             <a target="_blank" href={link}>{link}</a>
             <span >{clarification}</span>
         </div>
+        </SwiperSlide>
     )
 }
