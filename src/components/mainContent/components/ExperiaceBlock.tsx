@@ -13,6 +13,8 @@ interface SocialProps {
 
 export const ExperiaceBlock: FC<SocialProps> = ({ activeSideBar }) => {
     const {isDark} = useSidebar()
+    
+    console.log('ExperiaceBlock recalc')
 
     const [isHover, setIsHover] = useState(false)
     const videoRef = useRef<HTMLVideoElement>(null)
@@ -30,7 +32,7 @@ export const ExperiaceBlock: FC<SocialProps> = ({ activeSideBar }) => {
     }, [])
     return(
     <div onMouseEnter={(() => setIsHover(true))} onMouseLeave={(()=>{ setIsHover(false)})} className={clsx(activeSideBar? "Experience-proto ordinary-width": "Experience-proto closed-sidebar-width", isDark ? 'enable-animation unShadow':  "enable-animation")}>
-        {isDark ?<video className={isDark && isHover ? "opacity-1": "opacity-0"}  ref={videoRef}  src={hell} /> : ""}
+        {isDark ?<video muted className={isDark && isHover ? "opacity-1": "opacity-0"}  ref={videoRef}  src={hell} /> : ""}
         <Experience />
         <div className="small-margin" style={{ width: "150px"}}>
             <span>Dec 22, still working</span>

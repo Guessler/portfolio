@@ -5,13 +5,8 @@ import { ProjectDto } from "../types";
 import hell from "../../../assets/videoplayback.mp4"
 import { useSidebar } from "../../../utils/useSidebar";
 
-// import {  SwiperSlide } from 'swiper/react';
-
-// import 'swiper/css';
-
 interface ProjectsProps {
-    value: ProjectDto,
-    // data: ProjectDto[]
+    value: ProjectDto;
 }
 
 export const Project: FC<ProjectsProps> = ({ value: { pics, webSiteName, clarification, link}}) => {
@@ -51,7 +46,7 @@ export const Project: FC<ProjectsProps> = ({ value: { pics, webSiteName, clarifi
             <div className="icon-block">
                 <div className="switch-container">
                     <div className="switch-container-wrapper">
-                        {index > 0 && <button onClick={() => onSlide(true)} className="switch-button"><img src={arrow} alt={arrow} /></button>}
+                        {index > 0 && <button onClick={() => onSlide(true)} className="switch-buton"><img src={arrow} alt={arrow} /></button>}
                         {index < pics.length - 1 && <button onClick={() => onSlide()} className="switch-button rigth-button"><img className="left-button" src={arrow} alt={arrow} /></button>}
                     </div>
                 </div>

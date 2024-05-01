@@ -144,8 +144,12 @@ h2 {
     
     gap: 30px;
 
-    /* overflow: auto; */
     overflow: hidden;
+}
+
+.latest-project-container.isDown > *{
+    pointer-events: none;
+    user-select: none;
 }
 
 .latest-project-wrapper::after {

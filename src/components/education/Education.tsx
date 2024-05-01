@@ -12,6 +12,7 @@ interface EducationProps{
 export const Education:FC<EducationProps> = ({ icon, Enterprise, year,clarification}) =>{
 
     const {isDark} = useSidebar()
+    console.log('Education recalc')
 
     const [isHover, setIsHover] = useState(false)
     const videoRef = useRef<HTMLVideoElement>(null)
