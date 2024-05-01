@@ -125,7 +125,26 @@
     display: flex;
     justify-content: center;
 }
+.d-none{
+    display: none;
+}
+.easy-dark-theme{
+    width: 20px;
+    height: 20px;
 
+    background-color: red;
+}
+
+.theme-switchers{
+    gap: 20px;
+
+    display: flex;
+    align-items: center;
+}
+.active-side-bar-position{
+    flex-direction: column;
+    justify-content: center;
+}
 @media screen and (max-width: 128px) {
     .side-bar-normal-width{
         width: 94%;

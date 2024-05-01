@@ -1,9 +1,13 @@
-import { useEffect } from "react"
+import { FC, useEffect } from "react"
 import { themes } from "../consts";
 import { ThemeType } from "../types";
 import { useSidebar } from "../../../utils/useSidebar";
+import clsx from "clsx";
+interface chackbocPosition{
+    activeSideBar: boolean;
+}
 
-export const ThemeButton = () => {
+export const ThemeButton:FC<chackbocPosition> = ({ activeSideBar }) => {
 const {isDark:isDarkMode,toggleIsDark:toggleDarkMode} = useSidebar()
     useEffect(()=>{
         const savedTheme = localStorage.getItem("theme")
@@ -35,8 +39,11 @@ const {isDark:isDarkMode,toggleIsDark:toggleDarkMode} = useSidebar()
     },[isDarkMode])
 
     return (
+        <div className={clsx(activeSideBar ? "":"active-side-bar-position","theme-switchers")}>
         <button onClick={toggleDarkMode} className={isDarkMode ? "theme-btn swiched-theme-btn": " theme-btn"}>
             <div className={isDarkMode ? "circle white-circle": "circle "}></div>
         </button>
+        <input className="easy-dark-theme" type="checkbox" />
+        </div>
     )
 }

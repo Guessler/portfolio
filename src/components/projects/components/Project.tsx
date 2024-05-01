@@ -5,29 +5,33 @@ import { ProjectDto } from "../types";
 import hell from "../../../assets/videoplayback.mp4"
 import { useSidebar } from "../../../utils/useSidebar";
 
-import {  SwiperSlide } from 'swiper/react';
+// import {  SwiperSlide } from 'swiper/react';
 
-import 'swiper/css';
+// import 'swiper/css';
 
 interface ProjectsProps {
-    value: ProjectDto
+    value: ProjectDto,
+    // data: ProjectDto[]
 }
 
-export const Project: FC<ProjectsProps> = ({ value: { pics, webSiteName, clarification, link } }) => {
+export const Project: FC<ProjectsProps> = ({ value: { pics, webSiteName, clarification, link}}) => {
     const {isDark} = useSidebar()
 
     const [isHover, setIsHover] = useState(false)
     const videoRef = useRef<HTMLVideoElement>(null)
-
+    const [index, setIndex] = useState(0)
     const ref = useRef<HTMLDivElement>(null)
 
     const onSlide = (toLeft?: boolean) => {
-        if (toLeft) {
-            ref.current?.scrollTo({ left: -338, behavior: 'smooth' })
-            return
+        if (toLeft && index > 0) {
+            setIndex(index - 1);
+            ref.current?.scrollTo({ left: -338, behavior: 'smooth' });
+        } else if (!toLeft && index < pics.length - 1) {
+            setIndex(index + 1);
+            ref.current?.scrollTo({ left: 338, behavior: 'smooth' });
         }
-        ref.current?.scrollTo({ left: 338, behavior: 'smooth' })
-    }
+    };
+
     useEffect(() => {
         if (isHover) {
             videoRef.current?.play()
@@ -42,13 +46,14 @@ export const Project: FC<ProjectsProps> = ({ value: { pics, webSiteName, clarifi
     }, [])
 
     return (
-        <SwiperSlide>
         <div onMouseEnter={(() => setIsHover(true))} onMouseLeave={(()=>{ setIsHover(false)})}  className={isDark ?"projectsPropsContainer small-margin unShadow":"projectsPropsContainer small-margin "}>
-            {isDark ?<video  ref={videoRef}  src={hell} /> : ""}
+            {isDark ?<video className={isDark && isHover ? "opacity-1": "opacity-0"} ref={videoRef}  src={hell} /> : ""}
             <div className="icon-block">
                 <div className="switch-container">
-                    <button onClick={() => onSlide(true)} className="switch-button"><img src={arrow} alt={arrow} /></button>
-                    <button onClick={() => onSlide()} className="switch-button "><img className="left-button" src={arrow} alt={arrow} /></button>
+                    <div className="switch-container-wrapper">
+                        {index > 0 && <button onClick={() => onSlide(true)} className="switch-button"><img src={arrow} alt={arrow} /></button>}
+                        {index < pics.length - 1 && <button onClick={() => onSlide()} className="switch-button rigth-button"><img className="left-button" src={arrow} alt={arrow} /></button>}
+                    </div>
                 </div>
                 <div ref={ref} className="container-icon">
                     {Array.isArray(pics) ? pics.map(pic =>
@@ -60,6 +65,5 @@ export const Project: FC<ProjectsProps> = ({ value: { pics, webSiteName, clarifi
             <a target="_blank" href={link}>{link}</a>
             <span >{clarification}</span>
         </div>
-        </SwiperSlide>
     )
 }

@@ -1,7 +1,5 @@
 import "./style.css"
 
-// import arrow from "../../assets/arrow.svg"
-
 import icon from "../../assets/icon.png"
 
 import { Contacts } from "./components/Contacts"
@@ -29,15 +27,13 @@ export const SideBar = () => {
             <div className="line"></div>
             <Contacts activeSideBar={activeSideBar} />
             <div className="line"></div>
-
             <p className={activeSideBar ? "" : "display-none"}>Socials</p>
             <Socials activeSideBar={activeSideBar} />
             <div className="line"></div>
             <p className={activeSideBar ? "" : "display-none"}>Languages</p>
             <Languages activeSideBar={activeSideBar} />
-
             <div className={activeSideBar ? "" : "button-adaptive-position"}>
-                <ThemeButton />
+                <ThemeButton activeSideBar={activeSideBar}/>
             </div>
         </div>
     )

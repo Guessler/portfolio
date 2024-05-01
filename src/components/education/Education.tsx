@@ -32,7 +32,7 @@ export const Education:FC<EducationProps> = ({ icon, Enterprise, year,clarificat
     return(
         
         <div onMouseEnter={(() => setIsHover(true))} onMouseLeave={(()=>{ setIsHover(false)})} className={isDark?"education-container unShadow":"education-container"}>
-            {isDark ?<video  ref={videoRef}  src={hell} /> : ""}
+            {isDark ?<video className={isDark && isHover ? "opacity-1": "opacity-0"}  ref={videoRef}  src={hell} /> : ""}
             <div className="education-container-logo">
                 <img src={icon} alt={icon} />
                 <p className="enterprise-name">{Enterprise}</p>

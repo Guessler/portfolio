@@ -93,6 +93,5 @@ export const themes: ThemesType = {
         "--side-bar-color": "#2E2E48",
         "--main-text-color": "#fff",
         "--main-fat-text-color": "#f5f5f5",
-        // "--border-color": "#"
     },
 }
