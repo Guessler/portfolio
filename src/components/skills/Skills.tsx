@@ -56,13 +56,13 @@ export const Skills = () => {
     }, [isHoverGit]);
 
     return (
-        <div className="skills-clock">
-            <div
+        <div className="skills-clock" >
+            <div 
                 onMouseEnter={() => setIsHoverDesign(true)}
                 onMouseLeave={() => setIsHoverDesign(false)}
                 className={isDark ? "design-skills main-border unShadow" : "design-skills main-border"}
             >
-                {isDark && isHoverDesign && <video className="opacity-1" ref={videoRefDesign} src={videoSource} />}
+                {isDark && isHoverDesign && <video className={`opacity-1 video-container ${isHoverDesign ? 'active' : ''}`} ref={videoRefDesign} src={videoSource} />}
                 <p>Web Design</p>
                 <div className="skills-block-line"></div>
                 <p>Mobile Design</p>

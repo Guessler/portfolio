@@ -1,16 +1,9 @@
-import './App.css'
+import './App.css';
 
-import {MainContent} from "./components/mainContent"
-import {SideBar} from "./components/sideBar"
-import { SidebarProvider } from './utils/useSidebar'
+import WebSite from "./WebSite"
 
-const App = () => (
-  <div className='flex-row'>
-    <SidebarProvider>
-      <SideBar/>
-      <MainContent/>
-    </SidebarProvider>
-  </div>
-)
+const App = () => {
+  return <WebSite/>
+}
 
-export default App
+export default App;

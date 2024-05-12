@@ -54,7 +54,8 @@ h2 {
 }
 .Experience-proto:hover{
     border: 0.5px solid var(--accent-color);
-    box-shadow: 0 0 80px var(--border-color);
+    box-shadow: 0 0 40px var(--border-color);
+
 }
 .Experience-proto video{
     top: 0;
@@ -130,6 +131,7 @@ h2 {
     height: 420px;
     position: relative;
 
+
 }
 
 .latest-project-container {
@@ -157,12 +159,13 @@ h2 {
     position: absolute;
     z-index: 1;
     top: 0;
-    right: -100px;
+    right: -120px;
     width: 100px;
     height: 100%;
     background: var(--main-bg); 
     filter: blur(10px);
 }
+
 
 
 .icon-block {
@@ -269,7 +272,8 @@ h2 {
 
 .education-container:hover {
     border: 0.5px solid var(--accent-color);
-    box-shadow: 0 0 80px var(--border-color);
+    box-shadow: 0 0 40px var(--border-color);
+
 }
 
 .education-container-logo {
@@ -285,6 +289,8 @@ h2 {
     display: flex;
     justify-content: center;
     flex-direction: column;
+
+    gap: 10px;
 }
 .education-container video{
     top: 0;
@@ -336,7 +342,8 @@ h2 {
 
 .design-skills:hover{
     border: 0.5px solid var(--accent-color);
-    box-shadow: 0 0 80px var(--border-color);
+    box-shadow: 0 0 40px var(--border-color);
+
 }
 .skills-block-line {
     width: 1px;
@@ -378,7 +385,8 @@ h2 {
 }
 .development-skill-long-block:hover{
     border: 0.5px solid var(--accent-color);
-    box-shadow: 0 0 80px var(--border-color);
+    box-shadow: 0 0 40px var(--border-color);
+
 }
 
 .development-easiest-skills {
@@ -421,7 +429,8 @@ h2 {
 }
 .development-easiest-skills:hover{
     border: 0.5px solid var(--accent-color);
-    box-shadow: 0 0 80px var(--border-color);
+    box-shadow: 0 0 40px var(--border-color);
+
 }
 .development-git-skills {
     width: 212px;
@@ -457,7 +466,8 @@ h2 {
     transition: 0.3s all;
 
     border: 0.5px solid var(--accent-color);
-    box-shadow: 0 0 80px var(--border-color);
+    box-shadow: 0 0 40px var(--border-color);
+
 }
 
 .top-left-radius {
@@ -496,6 +506,23 @@ h2 {
 .unShadow:hover{
     border: none;
     box-shadow: none;
+}
+
+.Education-wrapper{
+    width: calc(100%-30px);
+    height: 200px;
+
+    gap: 30px;
+
+    padding-left: 30px;
+
+    display: flex;
+    align-items: center;
+    
+}
+.learning-time{
+    font-size: 12px;
+    font-weight: 300;
 }
 @media screen and (max-width: 1440px) {
     .container {
@@ -540,12 +567,6 @@ h2 {
     .big-container{
         width: 600px;
     }
-
-    .latest-project-container{
-        width: 100%;
-        padding: 0;
-        margin: 0;
-    }
     .latest-project-wrapper::after {
         right: -25px;
         width: 100px;
@@ -563,5 +584,7 @@ h2 {
 @media screen and (max-width: 576px) {
     .big-container{
         width: 100%;
+    }
+    .design-skills{
     }
 }

@@ -2,6 +2,7 @@ import "./style.css"
 
 import icon from "../../assets/icon.png"
 
+
 import { Contacts } from "./components/Contacts"
 import { Socials } from "./components/Socials"
 import { Languages } from "./components/Languages"

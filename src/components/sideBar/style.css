@@ -19,10 +19,13 @@
 }
 .side-bar-normal-width{
     width: 360px;
+    transition: 0.2s all;
 }
 .side-bar-small-width{
     width: 90px;
     padding: 0;
+    transition: 0.2s all;
+
 }
 
 .small-icon{
@@ -105,13 +108,18 @@
     align-items: center;
 }
 .small-arrow{
-    width: 20px;
+    width: 30px;
+
+    cursor: pointer;
 
     fill: var(--main-fat-text-color);
 
 }
 .small-arrow-reverce{
-    width: 20px;
+    width: 30px;
+
+    cursor: pointer;
+
 
     transform: scaleX(-1);
 
@@ -145,9 +153,9 @@
     flex-direction: column;
     justify-content: center;
 }
-@media screen and (max-width: 128px) {
+@media screen and (max-width: 400px) {
     .side-bar-normal-width{
-        width: 94%;
+        min-width: 100%;
         position: absolute;
         z-index: 100;
         min-height: 100%;

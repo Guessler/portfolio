@@ -2,9 +2,9 @@ import "./style.css";
 import { ExperiaceBlock } from './components/ExperiaceBlock';
 import { useSidebar } from "../../utils/useSidebar";
 import { Projects } from "../projects";
-import { Education } from "../education";
+// import { Education } from "../education";
 import { Skills } from "../skills";
-import kp11 from "../../assets/svg/kp-11-logo.svg"
+import { Educations } from "../education/Educations";
 
 export const MainContent = () => {
     const { state } = useSidebar();
@@ -17,12 +17,13 @@ export const MainContent = () => {
                 
                 <Projects />
                 <h2>Education</h2>
-                <Education
+                <Educations/>
+                {/* <Education
                     icon={kp11}
                     Enterprise="kp-11"
                     year="Oct 2023"
                     clarification="College of Entrepreneurship 11"
-                />
+                /> */}
                 <h2>Skills</h2>
                 <Skills/>
             </div>

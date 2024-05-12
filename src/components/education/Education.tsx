@@ -2,14 +2,15 @@ import { FC, useEffect, useRef, useState } from "react"
 
 import hell from "../../assets/videoplayback.mp4"
 import { useSidebar } from "../../utils/useSidebar"
+import { EducationDto } from "../projects/types";
+
 interface EducationProps{
-    icon: string,
-    Enterprise: string,
-    year: string,
-    clarification: string,
+    value: EducationDto;
 }
 
-export const Education:FC<EducationProps> = ({ icon, Enterprise, year,clarification}) =>{
+export const Education:FC<EducationProps> = ({ value }) => {
+
+    const { pics, name, time, moreInf, link} = value
 
     const {isDark} = useSidebar()
 
@@ -29,16 +30,19 @@ export const Education:FC<EducationProps> = ({ icon, Enterprise, year,clarificat
         videoRef.current?.pause()
     }, [])
     
+    const openLink = () => {
+        window.open(link, "_blank");
+    };
     return(
-        <div onMouseEnter={(() => setIsHover(true))} onMouseLeave={(()=>{ setIsHover(false)})}  className={isDark?"education-container unShadow":"education-container"}>
+        <div onClick={openLink} onMouseEnter={(() => setIsHover(true))} onMouseLeave={(()=>{ setIsHover(false)})}  className={isDark?"education-container unShadow":"education-container"}>
             {isDark ?<video className={isDark && isHover ? "opacity-1": "opacity-0"}  ref={videoRef}  src={hell} /> : ""}
             <div className="education-container-logo">
-                <img src={icon} alt={icon} />
-                <p className="enterprise-name">{Enterprise}</p>
+                <img src={pics} alt={pics} />
+                <p className="enterprise-name">{name}</p>
             </div>
             <div className="education-container-clarification">
-                <span>{year}</span>
-                <span>{clarification}</span>
+                <span className="learning-time">{time}</span>
+                <span className="learning-time">{moreInf}</span>
             </div>
         </div>
     )

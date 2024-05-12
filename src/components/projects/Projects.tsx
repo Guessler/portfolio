@@ -15,7 +15,11 @@ import DarkMain from "../../assets/real-time-news/image 13.png"
 import lightCreateNews from "../../assets/real-time-news/image 12.png"
 import darkCreateNews from "../../assets/real-time-news/image 11.png"
 
+import resumeTopLight from "../../assets/resume/image 15.png"
+import resumeTopDark from "../../assets/resume/image 14.png"
 
+import resumeBottomLight from "../../assets/resume/image 16.png"
+import resumeBottomDark from "../../assets/resume/image 17.png"
 
 import { Project } from "./components/Project"
 import { ProjectDto } from "./types"
@@ -90,11 +94,12 @@ export const Projects = () => {
             },
 
             {
-                pics: banner1,
-                webSiteName: 'Poweful Design System2',
+                pics: [resumeTopLight, resumeTopDark, resumeBottomLight, resumeBottomDark],
+                webSiteName: 'Resume',
                 link: 'https://sports.sharix.org',
-                clarification: "Figma UI Kit and Design System targeting a wide variety of use cases."
+                clarification: "A project written in React, including information about my expertise"
             },
+
         ])
     },[])
 
