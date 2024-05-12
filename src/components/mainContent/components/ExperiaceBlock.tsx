@@ -10,7 +10,9 @@ import { useSidebar } from "../../../utils/useSidebar";
 interface SocialProps {
     activeSideBar: boolean;
 }
-
+const handleMainDivClick = () => {
+    window.open("https://sharix.org/", "_blank");
+};
 export const ExperiaceBlock: FC<SocialProps> = ({ activeSideBar }) => {
     const {isDark} = useSidebar()
     
@@ -31,7 +33,7 @@ export const ExperiaceBlock: FC<SocialProps> = ({ activeSideBar }) => {
         videoRef.current?.pause()
     }, [])
     return(
-    <div onMouseEnter={(() => setIsHover(true))} onMouseLeave={(()=>{ setIsHover(false)})} className={clsx(activeSideBar? "Experience-proto ordinary-width": "Experience-proto closed-sidebar-width", isDark ? 'enable-animation unShadow':  "enable-animation")}>
+    <div onClick={handleMainDivClick} onMouseEnter={(() => setIsHover(true))} onMouseLeave={(()=>{ setIsHover(false)})} className={clsx(activeSideBar? "Experience-proto ordinary-width": "Experience-proto closed-sidebar-width", isDark ? 'enable-animation unShadow':  "enable-animation")}>
         {isDark ?<video muted className={isDark && isHover ? "opacity-1": "opacity-0"}  ref={videoRef}  src={hell} /> : ""}
         <Experience />
         <div className="small-margin" style={{ width: "150px"}}>

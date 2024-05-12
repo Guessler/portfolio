@@ -12,7 +12,6 @@ interface EducationProps{
 export const Education:FC<EducationProps> = ({ icon, Enterprise, year,clarification}) =>{
 
     const {isDark} = useSidebar()
-    console.log('Education recalc')
 
     const [isHover, setIsHover] = useState(false)
     const videoRef = useRef<HTMLVideoElement>(null)
@@ -31,8 +30,7 @@ export const Education:FC<EducationProps> = ({ icon, Enterprise, year,clarificat
     }, [])
     
     return(
-        
-        <div onMouseEnter={(() => setIsHover(true))} onMouseLeave={(()=>{ setIsHover(false)})} className={isDark?"education-container unShadow":"education-container"}>
+        <div onMouseEnter={(() => setIsHover(true))} onMouseLeave={(()=>{ setIsHover(false)})}  className={isDark?"education-container unShadow":"education-container"}>
             {isDark ?<video className={isDark && isHover ? "opacity-1": "opacity-0"}  ref={videoRef}  src={hell} /> : ""}
             <div className="education-container-logo">
                 <img src={icon} alt={icon} />

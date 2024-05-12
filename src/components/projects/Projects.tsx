@@ -2,6 +2,21 @@ import {  useEffect, useRef, useState } from "react"
 
 import banner1 from "../../assets/image 1.png"
 import banner2 from "../../assets/image 2.png"
+
+import daticyIconHeader from "../../assets/Dentistry/image 7.png"
+import daticyIconFooter from "../../assets/Dentistry/image 8.png"
+
+import lightThemeRegistration from "../../assets/real-time-news/image 10.png"
+import darkThemeRegistration from "../../assets/real-time-news/image 14.png"
+
+import lightMain from "../../assets/real-time-news/image 9.png"
+import DarkMain from "../../assets/real-time-news/image 13.png"
+
+import lightCreateNews from "../../assets/real-time-news/image 12.png"
+import darkCreateNews from "../../assets/real-time-news/image 11.png"
+
+
+
 import { Project } from "./components/Project"
 import { ProjectDto } from "./types"
 import clsx from "clsx"
@@ -57,22 +72,23 @@ export const Projects = () => {
         setData([
             {
                 pics: [banner1, banner2],
-                webSiteName: 'Poweful Design System',
+                webSiteName: 'Sharix Sport Friend',
                 link: 'https://sports.sharix.org',
-                clarification: "Figma UI Kit and Design System targeting a wide variety of use cases."
+                clarification: "A good, and most importantly quality multi-page project written in HTML, CSS and JS."
             },
             {
-                pics: banner1,
-                webSiteName: 'Poweful Design System1',
-                link: 'https://sports.sharix.org',
-                clarification: "Figma UI Kit and Design System targeting a wide variety of use cases."
+                pics: [daticyIconHeader, daticyIconFooter],
+                webSiteName: 'Dentistry of Dr. Ordzhonikidze',
+                link: 'https://dr-ordzhonikidze.ru/',
+                clarification: "The header and footer are not particularly attractive, but they are written very well."
             },
             {
-                pics: banner1,
-                webSiteName: 'Poweful Design System2',
+                pics: [lightThemeRegistration, darkThemeRegistration, lightMain, DarkMain, lightCreateNews, darkCreateNews],
+                webSiteName: 'Real Time News',
                 link: 'https://sports.sharix.org',
-                clarification: "Figma UI Kit and Design System targeting a wide variety of use cases."
+                clarification: "A good project written in React, but unfortunately it can't be considered completely finished."
             },
+
             {
                 pics: banner1,
                 webSiteName: 'Poweful Design System2',
@@ -88,7 +104,6 @@ export const Projects = () => {
             <div className="latest-project-wrapper">
                 <div
                     ref={ref} 
-                    // className={clsx("latest-project-container", isDown && "isDown")} 
                     className={clsx("latest-project-container")} 
                     onMouseDown={handleMouseDown}
                     onMouseLeave={handleMouseLeave}

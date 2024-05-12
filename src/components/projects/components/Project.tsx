@@ -17,15 +17,21 @@ export const Project: FC<ProjectsProps> = ({ value: { pics, webSiteName, clarifi
     const [index, setIndex] = useState(0)
     const ref = useRef<HTMLDivElement>(null)
 
+    const slideWidth = 338; // Ширина каждого слайда, подставьте правильное значение
+
     const onSlide = (toLeft?: boolean) => {
-        if (toLeft && index > 0) {
-            setIndex(index - 1);
-            ref.current?.scrollTo({ left: -338, behavior: 'smooth' });
-        } else if (!toLeft && index < pics.length - 1) {
-            setIndex(index + 1);
-            ref.current?.scrollTo({ left: 338, behavior: 'smooth' });
-        }
+        const container = ref.current;
+        if (!container) return;
+    
+        const newIndex = toLeft ? index - 1 : index + 1;
+        if (newIndex < 0 || newIndex >= pics.length) return;
+    
+        setIndex(newIndex);
+    
+        const scrollAmount = slideWidth * newIndex;
+        container.scrollTo({ left: scrollAmount, behavior: 'smooth' });
     };
+    
 
     useEffect(() => {
         if (isHover) {
@@ -46,7 +52,7 @@ export const Project: FC<ProjectsProps> = ({ value: { pics, webSiteName, clarifi
             <div className="icon-block">
                 <div className="switch-container">
                     <div className="switch-container-wrapper">
-                        {index > 0 && <button onClick={() => onSlide(true)} className="switch-buton"><img src={arrow} alt={arrow} /></button>}
+                        {index > 0 && <button onClick={() => onSlide(true)} className="switch-button"><img src={arrow} alt={arrow} /></button>}
                         {index < pics.length - 1 && <button onClick={() => onSlide()} className="switch-button rigth-button"><img className="left-button" src={arrow} alt={arrow} /></button>}
                     </div>
                 </div>
