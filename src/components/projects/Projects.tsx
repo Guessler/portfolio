@@ -6,15 +6,6 @@ import banner2 from "../../assets/image 2.png"
 import daticyIconHeader from "../../assets/Dentistry/image 7.png"
 import daticyIconFooter from "../../assets/Dentistry/image 8.png"
 
-import lightThemeRegistration from "../../assets/real-time-news/image 10.png"
-import darkThemeRegistration from "../../assets/real-time-news/image 14.png"
-
-import lightMain from "../../assets/real-time-news/image 9.png"
-import DarkMain from "../../assets/real-time-news/image 13.png"
-
-import lightCreateNews from "../../assets/real-time-news/image 12.png"
-import darkCreateNews from "../../assets/real-time-news/image 11.png"
-
 import resumeTopLight from "../../assets/resume/image 15.png"
 import resumeTopDark from "../../assets/resume/image 14.png"
 
@@ -77,7 +68,7 @@ export const Projects = () => {
             {
                 pics: [banner1, banner2],
                 webSiteName: 'Sharix Sport Friend',
-                link: 'https://sports.sharix.org',
+                link: 'https://aboba123.github.io/SportFriend/',
                 clarification: "A good, and most importantly quality multi-page project written in HTML, CSS and JS."
             },
             {
@@ -87,16 +78,9 @@ export const Projects = () => {
                 clarification: "The header and footer are not particularly attractive, but they are written very well."
             },
             {
-                pics: [lightThemeRegistration, darkThemeRegistration, lightMain, DarkMain, lightCreateNews, darkCreateNews],
-                webSiteName: 'Real Time News',
-                link: 'https://sports.sharix.org',
-                clarification: "A good project written in React, but unfortunately it can't be considered completely finished."
-            },
-
-            {
                 pics: [resumeTopLight, resumeTopDark, resumeBottomLight, resumeBottomDark],
                 webSiteName: 'Resume',
-                link: 'https://sports.sharix.org',
+                link: 'this web-site',
                 clarification: "A project written in React, including information about my expertise"
             },
 
