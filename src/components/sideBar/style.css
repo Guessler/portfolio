@@ -1,10 +1,12 @@
-.job-color{
+.job-color {
     width: 300px;
     background-color: #2AA5A0;
     background-image: linear-gradient(90deg, #1B82E1, #9343F7);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 .side-bar-content {
     min-height: 100vh;
     padding-top: 10px;
@@ -153,11 +155,17 @@
     flex-direction: column;
     justify-content: center;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     .side-bar-normal-width{
-        min-width: 100%;
-        position: absolute;
+        min-width: 80%;
+        position: fixed;
         z-index: 100;
-        min-height: 100%;
+    }
+    .side-bar-small-width{
+        width: 90px;
+        padding: 10px;
+        transition: 0.2s all;
+        display: none;
+    
     }
 }

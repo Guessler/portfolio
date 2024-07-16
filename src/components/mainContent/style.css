@@ -148,7 +148,25 @@ h2 {
 
     overflow: hidden;
 }
-
+.latest-project-container {
+    user-select: none; /* Предотвращает выделение текста */
+    cursor: grab; /* Устанавливает курсор в виде руки */
+    overflow: hidden; /* Скрывает любые элементы, которые выходят за пределы контейнера */
+  }
+  
+  .latest-project-container:active {
+    cursor: grabbing; /* Устанавливает курсор в виде хватающей руки при нажатии */
+  }
+  
+  .latest-project-container img {
+    pointer-events: none; /* Предотвращает захват изображений */
+  }
+  
+  .row{
+    display: flex;
+    flex-direction: row;
+  }
+  
 .latest-project-container.isDown > *{
     pointer-events: none;
     user-select: none;
@@ -508,18 +526,38 @@ h2 {
     box-shadow: none;
 }
 
-.Education-wrapper{
-    width: calc(100%-30px);
-    height: 200px;
-
-    gap: 30px;
-
-    padding-left: 30px;
-
+.education-wrapper {
     display: flex;
     align-items: center;
-    
+    gap: 30px;
+    height: 200px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    cursor: grabbing;
+    transition: cursor 0.3s ease;
 }
+
+.education-wrapper:hover {
+    cursor: pointer;
+}
+
+.education-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.education-wrapper > * {
+    flex: 0 0 auto;
+}
+
+
+
+
+
+
 .learning-time{
     font-size: 12px;
     font-weight: 300;
@@ -577,15 +615,24 @@ h2 {
     .big-container{
         width: 100%;
     }
+    .container {
+        width: 100%;
+        display: none;
+    }
     .latest-project-wrapper::after {
         display: none;
+    }
+    .main-content-bg{
+        padding-left: 25px;
     }
 }
 @media screen and (max-width: 576px) {
     .big-container{
         width: 100%;
+
     }
-    .design-skills{
+    .main-content-bg{
+        padding-left: 0;
     }
 }
 
