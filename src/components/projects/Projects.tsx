@@ -12,6 +12,10 @@ import resumeTopDark from "../../assets/resume/image 14.png";
 import resumeBottomLight from "../../assets/resume/image 16.png";
 import resumeBottomDark from "../../assets/resume/image 17.png";
 
+import mainPage from "../../assets/MindSpace/main-page.png"
+import newWorkspace from "../../assets/MindSpace/new-warkspace.png"
+import workspace from "../../assets/MindSpace/workspace.png"
+
 import { Project } from "./components/Project";
 import { ProjectDto } from "./types";
 import clsx from "clsx";
@@ -113,7 +117,7 @@ export const Projects = () => {
       {
         pics: [banner1, banner2],
         webSiteName: 'Sharix Sport Friend',
-        link: 'https://aboba123.github.io/SportFriend/',
+        link: 'https://guessler.github.io/SportFriend/',
         clarification: "A good, and most importantly quality multi-page project written in HTML, CSS and JS."
       },
       {
@@ -125,8 +129,14 @@ export const Projects = () => {
       {
         pics: [resumeTopLight, resumeTopDark, resumeBottomLight, resumeBottomDark],
         webSiteName: 'Resume',
-        link: 'this web-site',
+        link: 'https://guessler.github.io/portfolio/',
         clarification: "A project written in React, including information about my expertise"
+      },
+      {
+        pics: [mainPage, newWorkspace, workspace],
+        webSiteName: 'MindSpace',
+        link: 'isn\'t ready yet',
+        clarification: "A project written in the likeness of notion"
       },
     ]);
   }, []);

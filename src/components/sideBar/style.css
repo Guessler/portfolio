@@ -25,14 +25,20 @@
 }
 .side-bar-small-width{
     width: 90px;
-    padding: 0;
+    padding: 0px;
     transition: 0.2s all;
 
 }
 
 .small-icon{
-    width: 54px;
+    width: 50px;
+    border-radius: 50px;
+
 }
+/* .big-icon{
+    width: 100px;
+    border-radius: 50px;
+} */
 .line{
     width: 100%;
     height: 0.5px;
@@ -155,17 +161,20 @@
     flex-direction: column;
     justify-content: center;
 }
-@media screen and (max-width: 500px) {
+
+@media screen and (max-width: 576px) {
     .side-bar-normal-width{
-        min-width: 80%;
-        position: fixed;
+        min-width: 72%;
+        height: 100vh;
+
         z-index: 100;
+
+        position: fixed;
+        
+        overflow-y: auto;
+        overflow-x: hidden;
     }
     .side-bar-small-width{
-        width: 90px;
-        padding: 10px;
-        transition: 0.2s all;
         display: none;
-    
     }
 }

@@ -37,7 +37,7 @@ export const Education:FC<EducationProps> = ({ value }) => {
         <div onClick={openLink} onMouseEnter={(() => setIsHover(true))} onMouseLeave={(()=>{ setIsHover(false)})}  className={isDark?"education-container unShadow":"education-container"}>
             {isDark ?<video className={isDark && isHover ? "opacity-1": "opacity-0"}  ref={videoRef}  src={hell} /> : ""}
             <div className="education-container-logo">
-                <img src={pics} alt={pics} />
+                <img className="logo-size" src={pics} alt={pics} />
                 <p className="enterprise-name">{name}</p>
             </div>
             <div className="education-container-clarification">

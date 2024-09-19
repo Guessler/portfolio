@@ -3,6 +3,7 @@ import { EducationDto } from "../projects/types"
 import { Education } from "./Education"
 import kp11 from "../../assets/svg/kp-11-logo.svg"
 import w3schools from "../../assets/svg/w3schools.svg"
+import learnJs from "../../assets/favicon.png"
 
 export const Educations = () => {
     const [data, setData] = useState<EducationDto[]>([])
@@ -27,6 +28,13 @@ export const Educations = () => {
                 time: "April 2024",
                 moreInf: "got three certifications in Js, Bootstrap, React ",
                 link: "https://pathfinder.w3schools.com/"
+            },
+            {
+                pics: learnJs,
+                name: "learn js",
+                time: "April 2024",
+                moreInf: "completed the entire course",
+                link: "https://learn.javascript.ru/"
             },
         ])
     }, [])

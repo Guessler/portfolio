@@ -56,7 +56,7 @@ export const Skills = () => {
     }, [isHoverGit]);
 
     return (
-        <div className="skills-clock" >
+        <div className="skills-block" >
             <div 
                 onMouseEnter={() => setIsHoverDesign(true)}
                 onMouseLeave={() => setIsHoverDesign(false)}
