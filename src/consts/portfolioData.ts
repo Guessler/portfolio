@@ -115,7 +115,7 @@ export const portfolioModalData: portfolioResponse[] = [
       ],
     },
     stack: [Laravel, JS, HTML, CSS, Tailwind],
-    link: "https://vvrem.ru",
+    link: "https://soueast-nzv.ru/",
     type: "frontend",
   },
   {
@@ -144,34 +144,34 @@ export const portfolioModalData: portfolioResponse[] = [
     link: "https://n-avtosalon.ru/",
     type: "frontend",
   },
-  {
-    id: 6,
-    name: { en: "Arooma", ru: "Arooma" },
-    image: arooma,
-    description: {
-      en: "A premium website for the sale of tables and chairs with an online designer that allows you to customize materials, sizes and furniture designs to meet individual needs, as well as view a catalog of ready-made solutions and place an order.",
-      ru: "Премиальный веб-сайт по продаже столов и стульев с онлайн-конструктором, позволяющим настраивать материалы, размеры и дизайн мебели под индивидуальные потребности, а также просматривать каталог готовых решений и оформлять заказ.",
-    },
-    contributions: {
-      en: [
-        "Implemented the frontend part of the web application",
-        "Integrated the application with backend services",
-        "Designed code architecture and project structure",
-        "Developed responsive and cross-browser layouts",
-        "Implemented a table and chair constructor"
-      ],
-      ru: [
-        "Реализовывал frontend-часть веб-приложения",
-        "Осуществлял интеграцию с backend-сервисами",
-        "Проектировал архитектуру кода и структуру проекта",
-        "Выполнял адаптивную и кроссбраузерную верстку интерфейсов",
-        "Реализовал конструктор столов и стульев",
-      ],
-    },
-    stack: [ReactIcon, NextJS, Zustand, Tailwind, TS],
-    link: "https://arooma-shop.ru/",
-    type: "frontend",
-  },
+  // {
+  //   id: 6,
+  //   name: { en: "Arooma", ru: "Arooma" },
+  //   image: arooma,
+  //   description: {
+  //     en: "A premium website for the sale of tables and chairs with an online designer that allows you to customize materials, sizes and furniture designs to meet individual needs, as well as view a catalog of ready-made solutions and place an order.",
+  //     ru: "Премиальный веб-сайт по продаже столов и стульев с онлайн-конструктором, позволяющим настраивать материалы, размеры и дизайн мебели под индивидуальные потребности, а также просматривать каталог готовых решений и оформлять заказ.",
+  //   },
+  //   contributions: {
+  //     en: [
+  //       "Implemented the frontend part of the web application",
+  //       "Integrated the application with backend services",
+  //       "Designed code architecture and project structure",
+  //       "Developed responsive and cross-browser layouts",
+  //       "Implemented a table and chair constructor"
+  //     ],
+  //     ru: [
+  //       "Реализовывал frontend-часть веб-приложения",
+  //       "Осуществлял интеграцию с backend-сервисами",
+  //       "Проектировал архитектуру кода и структуру проекта",
+  //       "Выполнял адаптивную и кроссбраузерную верстку интерфейсов",
+  //       "Реализовал конструктор столов и стульев",
+  //     ],
+  //   },
+  //   stack: [ReactIcon, NextJS, Zustand, Tailwind, TS],
+  //   link: "https://arooma-shop.ru/",
+  //   type: "frontend",
+  // },
   // {
   //   id: 5,
   //   name: { en: "SPORT-FRIEND", ru: "SPORT-FRIEND" },
